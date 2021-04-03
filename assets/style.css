@@ -1,0 +1,9 @@
+:root {
+    --primaryColor: #7510f7;
+}
+
+* {
+    color: var(--primaryColor);
+    font-family: helvetica,Arial, sans-serif;
+}
+g
