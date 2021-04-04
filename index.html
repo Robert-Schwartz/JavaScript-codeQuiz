@@ -8,10 +8,25 @@
     <title>Code Quiz</title>
   </head>
   <body>
-    <header></header>
+    <header> <h1>Javascript Quiz!</h1></header>
 
-    <main>
-      <h1>Welcome to the Quiz</h1>
+    <main class="quiz">
+      <h1>Welcome to the Quiz!</h1>
+
+      <div id="quizStart">START QUIZ!</div>
+
+      <!--Quiz Instructions-->
+      <div id="quizInstructions" class="quizContent">
+        <h2>Quiz Instructions</h2>
+        <h4>1. You must answer the Questions</h4>
+        <h4>2. Each correct answer is worth 100 pts.</h4>
+        <h4>3. Each incorrect response will deduct 50 pts.</h4>
+        <h4>4. You must answer the questions before the time expires</h4>
+        <div class="button">
+          <button id="quitBtn">Quit</button>
+          <button id="contBtn">Continue!</button>
+        </div>
+      </div>
     </main>
 
     <footer></footer>

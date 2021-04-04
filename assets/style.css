@@ -1,9 +1,115 @@
 :root {
-    --primaryColor: #7510f7;
+  --primaryColor: #7510f7;
+  --secondaryColor: black;
+  --altPrime: #e7f1fa;
+  --altSecond: #d4e0ee;
 }
 
 * {
-    color: var(--primaryColor);
-    font-family: helvetica,Arial, sans-serif;
+  color: var(--primaryColor);
+  font-family: impact, helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-g
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: var(--altSecond);
+}
+
+header {
+  background-color: var(--secondaryColor);
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  position: -webkit-sticky;
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+}
+
+header h1 {
+  color: var(--altPrime);
+  font-family: helvetica, arial, sans-serif;
+  margin: 5px;
+}
+
+.quiz {
+  height: auto;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.quiz h1 {
+  text-align: center;
+  margin: 50px;
+  font-size: 55px;
+  color: var(--secondaryColor);
+}
+
+#quizStart {
+  height: 70px;
+  width: 250px;
+  text-align: center;
+  padding: 20px 0;
+  background: var(--altPrime);
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 3px solid var(--primaryColor);
+  cursor: pointer;
+}
+
+#quizStart:hover {
+  background: var(--primaryColor);
+  color: var(--altPrime);
+}
+
+.quizContent {
+  height: auto;
+  width: 600px;
+  padding: 25px;
+  background: var(--altPrime);
+  border-radius: 25px;
+  border: 2px solid var(--primaryColor);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.quizContent h2 {
+  text-align: center;
+  color: var(--secondaryColor);
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.quizContent h4 {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#quitBtn {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#contBtn {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quiz button {
+  height: 50px;
+  width: 120px;
+}
