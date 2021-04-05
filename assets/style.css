@@ -38,6 +38,23 @@ header h1 {
   margin: 5px;
 }
 
+footer {
+  background-color: var(--secondaryColor);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  bottom: 0;
+  margin: 0;
+  z-index: 999;
+}
+
+footer h1 {
+    color: var(--altPrime);
+  font-family: helvetica, arial, sans-serif;
+  margin: 5px;
+  font-size: 15px;
+}
+
 .quizContainer {
   height: auto;
   width: auto;
@@ -64,6 +81,7 @@ header h1 {
   border-radius: 10px;
   border: 3px solid var(--primaryColor);
   cursor: pointer;
+  display: none;
 }
 
 #quizStart:hover {
@@ -190,4 +208,40 @@ header h1 {
   align-items: center;
   text-align: center;
   margin: 2px 0 0 27px;
+}
+
+/*Quiz Question Section */
+#quiz #question {
+  position: absolute;
+  top: 90px;
+  display: flex;
+  flex-direction: row;
+}
+
+#quiz #question h2 {
+  font-size: 25px;
+  color: var(--secondaryColor);
+}
+
+#quiz #question h2:first-child {
+  margin: 0 10px 0 5px;
+}
+
+#quiz #optionList {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 160px;
+}
+
+#quiz #optionList h4 {
+    height: 50px;
+    width: 535px;
+    line-height: 50px;
+    margin: 10px 0;
+    padding: 0 20px;
+    font-size: 20px;
+    overflow:hidden;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 25px;
 }
