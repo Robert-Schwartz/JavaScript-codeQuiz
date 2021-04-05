@@ -8,13 +8,11 @@
     <title>Code Quiz</title>
   </head>
   <body>
-    <header> <h1>Javascript Quiz</h1></header>
+    <header> Javascript Quiz</header>
 
     <main class="quizContainer">
 
       <!--     Intro Section     -->
-
-      <h1>Welcome to the Quiz!</h1>
 
       <div id="quizStart">START QUIZ!</div>
 
@@ -27,7 +25,7 @@
         <h4>3. Each incorrect response will deduct 50 pts.</h4>
         <h4>4. You must answer the questions before the time expires</h4>
         <div id="button">
-          <button id="quitBtn">Quit</button>
+          <button id="exitBtn">Exit</button>
           <button id="contBtn">Continue</button>
         </div>
       </div>
@@ -46,37 +44,38 @@
         <!--     Quiz Questions     -->
 
         <div id="question">
-          <h2 id="questionNo">1.  </h2>
-          <h2 id="questionText"> This is the First Question</h2>
+          <h2 id="questionNo"></h2>
+          <h2 id="questionText"></h2>
         </div>
 
         <!--    Quiz Choice Options    -->
 
         <div id="optionList">
-          <h4 class="choiceQue" id="option1"> A. This is the first possibility </h4>
-          <h4 class="choiceQue" id="option2"> B. This is the second possibility </h4>
-          <h4 class="choiceQue" id="option3"> C. This is the third possibility </h4>
-          <h4 class="choiceQue" id="option4"> D. This is the fourth possibility </h4>
+          <h4 class="choiceQue" id="option1"> </h4>
+          <h4 class="choiceQue" id="option2"> </h4>
+          <h4 class="choiceQue" id="option3"> </h4>
+          <h4 class="choiceQue" id="option4"> </h4>
         </div>
 
         <!--     Quiz Answers     -->
 
         <div id="answersSection">
-          <h3 id="totalCorrect"> Question: 3 of 10 </h3>
+          <h3 id="totalCorrect"> 3 of 10 </h3>
           <h3 id="nextQuestion" >Next &#8594 </h3>
         </div>
       </div>
         <!--     Results Sections    -->
-        <div id="results">
-          <!-- <img class="success"></img> -->
-          <h6 id="result"> You Have Completed the Quiz! </h6>
+        <div id="result">
+          <h6>Nice Job!  You have finished the quiz! </h6>
           <h6 id="points"> You got 4 out of 10 Right!</h6>
+          <button id="quit"> Quit </button>
+          <button id="retry"> Retry </button>
         </div>
     </main>
       <!--     Footer     -->
     <footer>
-     <h1> Thanks for Playing!</h1>
-     <h1>Created by Robert Schwartz 2021 </h1>
+    Thanks for Playing!
+     Created by Robert Schwartz 2021 
     </footer>
     <script src="assets/js/script.js"></script>
   </body>
