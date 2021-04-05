@@ -34,7 +34,6 @@ header {
 
 header h1 {
   color: var(--altPrime);
-  font-family: helvetica, arial, sans-serif;
   margin: 5px;
 }
 
@@ -49,7 +48,7 @@ footer {
 }
 
 footer h1 {
-    color: var(--altPrime);
+  color: var(--altPrime);
   font-family: helvetica, arial, sans-serif;
   margin: 5px;
   font-size: 15px;
@@ -78,7 +77,7 @@ footer h1 {
   background: var(--primaryColor);
   font-size: 25px;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 25px;
   border: 3px solid var(--primaryColor);
   cursor: pointer;
   display: none;
@@ -96,7 +95,7 @@ footer h1 {
   width: 600px;
   padding: 25px;
   background-color: var(--altPrime);
-  border-radius: 25px 5px;
+  border-radius: 25px;
   border: 2px solid var(--primaryColor);
   font-size: 20px;
   line-height: 1.5;
@@ -152,7 +151,7 @@ footer h1 {
 
 /*   Quiz Content Section   */
 #quiz {
-  display: block;
+  /* display: block; */
   height: 480px;
   position: relative;
   display: flex;
@@ -169,7 +168,7 @@ footer h1 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  border-radius: 25px 5px;
+  border-radius: 25px 25px 0 0;
 }
 
 #quiz #quizHeader h5 {
@@ -187,8 +186,8 @@ footer h1 {
   margin: 25px;
   display: flex;
   flex-direction: row;
-  border-radius: 5px 5px;
   position: absolute;
+  align-items: center;
   right: 10px;
 }
 
@@ -197,17 +196,19 @@ footer h1 {
   display: grid;
   color: var(--altPrime);
   align-content: center;
+  justify-content: center;
   padding: 15px 15px;
 }
 
 #quiz #quizHeader #timer #time {
-  height: 40px;
-  width: 45px;
+  height: 37px;
+  width: 37px;
   background-color: var(--altPrime);
   color: var(--primaryColor);
   align-items: center;
   text-align: center;
   margin: 2px 0 0 27px;
+  border-radius: 5px;
 }
 
 /*Quiz Question Section */
@@ -228,20 +229,108 @@ footer h1 {
 }
 
 #quiz #optionList {
-    height: 400px;
-    width: 100%;
-    position: absolute;
-    top: 160px;
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 160px;
 }
 
 #quiz #optionList h4 {
-    height: 50px;
-    width: 535px;
-    line-height: 50px;
-    margin: 10px 0;
-    padding: 0 20px;
-    font-size: 20px;
-    overflow:hidden;
-    border: 1px solid var(--secondaryColor);
-    border-radius: 25px;
+  height: 50px;
+  width: 535px;
+  line-height: 50px;
+  margin: 10px 0;
+  padding: 0 20px;
+  font-size: 20px;
+  overflow: hidden;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#quiz #optionList h4:hover {
+  background-color: var(--primaryColor);
+  color: var(--altPrime);
+}
+
+#quiz #optionList .active {
+  background-color: var(--primaryColor);
+  color: var(--altPrime);
+}
+
+#quiz #optionList .disabled {
+  pointer-events: none;
+}
+
+/*  Answers section */
+
+#quiz #answersSection {
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: var(--secondaryColor);
+  border-radius: 0px 0px 25px 25px;
+}
+
+#quiz #answersSection h3 {
+  margin: 0px 25px;
+  display: none;
+}
+#quiz #answersSection h3:first-child {
+  background: none;
+}
+
+#quiz #answersSection h3:last-child {
+  height: 40px;
+  width: 100px;
+  display: flex;
+  place-items: center;
+  color: var(--altPrime);
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  background-color: yellow;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+#quiz #answersSection h3:hover {
+  background-color: var(--secondaryColor);
+}
+
+/* Results Section */
+
+.quizContainer #results {
+  height: 500px;
+  width: 450px;
+  padding: 20px;
+  background-color: yellowgreen;
+  border: 2px solid var(--secondaryColor);
+  overflow: hidden;
+  position: relative;
+
+  /* display: none; */
+}
+
+.quizContainer #results #points h6 {
+    height: 40px;
+    width: 90%;
+    font-size: 25px;
+    position: absolute;
+    text-align: center;
+    top: 235px;
+    color: salmon;
+
+}
+
+.quizContainer #result #points h6 {
+    font-size: 30px;
+    top: 275px;
+    margin: 5px;
 }
