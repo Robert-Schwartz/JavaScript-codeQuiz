@@ -2,8 +2,11 @@
   --primaryColor: #7510f7;
   --secondaryColor: black;
   --altPrime: white;
+  --btns: #f4a261;
+  --correct: #06d6a0;
+  --wrong: #ef476f;
   --altBkgr: #d4e0ee;
-  --primaryBkgr: #240046;
+  --primaryBkgr: #81b29a;
 }
 
 * {
@@ -21,18 +24,80 @@ body {
   background-color: var(--primaryBkgr);
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .quizBox {
-    padding: 15px;
-    width:900px;
-    max-width: 80%;
-    background-color: Var(--altPrime);
-    border: 2px solid black;
-    box-shadow: 0 0 10px 2px;
-    border-radius: 25px 5px;
+  padding: 20px;
+  width: 800px;
+  max-width: 80%;
+  background-color: Var(--altPrime);
+  border: 2px solid black;
+  box-shadow: 0 0 10px 2px;
+  border-radius: 25px 25px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .btnGrid {
-    display: grid;
+  display: grid;
+  padding: 15px;
+  margin: 20px 20px;
+  gap: 20px;
+  grid-template-columns: repeat(2, auto);
 }
+
+.option {
+  background: var(--altPrime);
+  color: var(--secondaryColor);
+  border: 1px solid var(--primaryColor);
+  box-shadow: 0 0 5px;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 20px;
+}
+
+.option:hover {
+  background: var(--btns);
+  color: var(--altPrime);
+  border: 1px solid var(--primaryColor);
+}
+
+.option.correct {
+  background: var(--correct);
+  color: var(--secondaryColor);
+  border: 1px solid var(--secondaryColor);
+}
+
+.option.wrong {
+    background: var(--wrong);
+    color: var(--altPrime);
+    border: 1px solid var(--secondaryColor);
+  }
+
+.controls {
+    display: flex;
+    justify-content: center;
+     
+}
+
+  .btns {
+    background: var(--primaryColor);
+    color: var(--altPrime);
+    border: 1px solid black;
+    box-shadow: 0 0 5px;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .btns:hover {
+    background: var(--btns);
+    color: var(--altPrime);
+    border: 1px solid var(--primaryColor);
+  }
+
+  .hide {
+      display: none;
+  }
