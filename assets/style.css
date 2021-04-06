@@ -2,7 +2,37 @@
   --primaryColor: #7510f7;
   --secondaryColor: black;
   --altPrime: white;
-  --altSecond: #d4e0ee;
+  --altBkgr: #d4e0ee;
+  --primaryBkgr: #240046;
 }
 
 * {
+  box-sizing: border-box;
+  font-family: Tahoma, Verdana, sans-serif;
+  color: var(--primaryColor);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--primaryBkgr);
+  justify-content: center;
+  align-items: center;
+}
+
+.quizBox {
+    padding: 15px;
+    width:900px;
+    max-width: 80%;
+    background-color: Var(--altPrime);
+    border: 2px solid black;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 25px 5px;
+}
+
+.btnGrid {
+    display: grid;
+}

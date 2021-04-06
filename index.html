@@ -8,16 +8,38 @@
     <title>JS Code Quiz</title>
   </head>
   <body>
-    <header> Javascript Quiz</header>
+    <!-- <header> Javascript Quiz</header> -->
 
-    <main class="quizContainer">
+    <main>
+      <!--    Main Quiz Container    -->
+      <section class="quizBox">
 
+        <!--  questions and answers  -->
+        <div class ="hide" id="questionsAnswers">
+          <div id="questions"> 
+            This is where the questions will go 
+          </div>
+          <div class="btnGrid" id="answers">
+            <button class="btn"> Option 1</button>
+            <button class="btn"> Option 1</button>
+            <button class="btn"> Option 1</button>
+            <button class="btn"> Option 1</button>
+          </div>
+        </div>
+
+        <!--begin and next buttons-->
+        <div class="controls">
+          <button class= "btn beginBtn" id="begin"> Begin </button>
+          <button class="hide btn nextBtn" id="nextBtn"> Next </button>
+        </div>
+
+      </section>
       
     </main>
       <!--     Footer     -->
-    <footer>
+    <!-- <footer>
     Thanks for Playing! Created by Robert Schwartz 2021 
-    </footer>
+    </footer> -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/questions.js"></script>
   </body>
