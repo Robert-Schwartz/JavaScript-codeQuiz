@@ -2,8 +2,11 @@
 var begin = document.querySelector("#beginBtn");
 var next = document.querySelector("#nextBtn");
 var quizContent = document.querySelector("#questionAnswers");
+var answers = document.querySelectorAll(".option");
+var quizScore = document.querySelector("#scoreBox");
+var result = document.querySelector("#resultText");
 var questionIndex = 0;
-var quizScore = 0;
+var newScore = 0;
 var timer = 60;
 // TODO:  create function for score
 //TODO:  create function for timer
@@ -16,21 +19,20 @@ begin.addEventListener("click", function () {
   // TO DO:  gameScore();
 });
 
-//-----Display game questions
+//-----Display Game Questions
 function gameStart() {
   begin.classList.add("hide");
   document.querySelector("#welcome").classList.add("hide");
   quizContent.classList.remove("hide");
   next.classList.remove("hide");
+  quizScore.textContent = `Score: ${newScore}`;
   gameNext();
-  //TO DO:  add score and timer
 }
 
 //-----Pull Questions and Answers to display
 function gameNext() {
   document.querySelector("#questions").textContent =
     questionCard[questionIndex].question;
-  let answers = document.querySelectorAll(".option");
 
   for (let i = 0; i < answers.length; i++) {
     answers[i].textContent = questionCard[questionIndex].answers[i].text;
@@ -45,17 +47,36 @@ function chooseAnswer() {
   console.log(this.value);
   if (this.value === "true") {
     this.classList.add("correct");
-    //add score incriment {score ++}
+    newScore = newScore += 100;
+    console.log(newScore);
+    result.classList.remove("hide");
+    quizScore.classList.add("hide");
+    result.textContent = "Correct! +100 Pts";
   } else {
     this.classList.add("wrong");
+    newScore = newScore -= 25;
+    console.log(newScore);
+    result.classList.remove("hide");
+    quizScore.classList.add("hide");
+    result.textContent = "Incorrect! -25 Pts";
   }
 }
 
 //-----Pull next question when user clicks "Next"
 next.addEventListener("click", function () {
   questionIndex++;
+  resetAnswers();
   gameNext();
 });
+
+//----- Reset Answers
+function resetAnswers() {
+  //   answers.classList.remove("wrong correct");
+  console.log("rest quiz box");
+  result.classList.add("hide");
+  quizScore.classList.remove("hide");
+  quizScore.textContent = `Score: ${newScore}`;
+}
 
 //-----end game
 //TO D0:  add while loop - as long as no length

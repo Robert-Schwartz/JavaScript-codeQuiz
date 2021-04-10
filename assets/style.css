@@ -39,6 +39,21 @@ body {
   font-weight: bold;
 }
 
+.displayResult {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#scoreBox {
+  color: var(--secondaryColor);
+  text-align: left;
+}
+
+#resultText {
+  color: var(--secondaryColor);
+  text-align: right;
+}
+
 .btnGrid {
   display: grid;
   padding: 15px;
@@ -63,24 +78,13 @@ body {
   border: 1px solid var(--primaryColor);
 }
 
-.option.correct {
-  background: var(--correct);
-  color: var(--secondaryColor);
-  border: 1px solid var(--secondaryColor);
-}
 
 .correct {
   background: var(--correct);
   color: var(--secondaryColor);
   border: 1px solid var(--secondaryColor);
-}
+} 
 
-
-.option.wrong {
-  background: var(--wrong);
-  color: var(--altPrime);
-  border: 1px solid var(--secondaryColor);
-}
 
 .wrong {
   background: var(--wrong);
