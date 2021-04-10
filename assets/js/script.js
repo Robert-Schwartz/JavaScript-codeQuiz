@@ -1,36 +1,32 @@
-//global variables
+//-----Global variables
 var begin = document.querySelector("#beginBtn");
 var next = document.querySelector("#nextBtn");
 var quizContent = document.querySelector("#questionAnswers");
 var questionIndex = 0;
+var quizScore = 0;
+var timer = 60;
+// TODO:  create function for score
+//TODO:  create function for timer
 
-//create function for score
-
-//create funciton for timer
-
-//Start the Game and Timer
+//-----Start the Game and Timer when user clicks "Begin"
 begin.addEventListener("click", function () {
   gameStart();
-  // gameTime();
-  // gameScore();
+  console.log("Start questions");
+  // TO DO:  gameTime();
+  // TO DO:  gameScore();
 });
 
-next.addEventListener("click", function () {
-  questionIndex++;
-  //remove correct and wrong classes
-  gameNext();
-});
-
+//-----Display game questions
 function gameStart() {
   begin.classList.add("hide");
   document.querySelector("#welcome").classList.add("hide");
   quizContent.classList.remove("hide");
   next.classList.remove("hide");
   gameNext();
-  //add score and timer
+  //TO DO:  add score and timer
 }
 
-//continue to next question
+//-----Pull Questions and Answers to display
 function gameNext() {
   document.querySelector("#questions").textContent =
     questionCard[questionIndex].question;
@@ -43,7 +39,7 @@ function gameNext() {
   }
 }
 
-//Choose answer
+//-----Choose answer
 function chooseAnswer() {
   console.log("answer clicked!");
   console.log(this.value);
@@ -53,17 +49,17 @@ function chooseAnswer() {
   } else {
     this.classList.add("wrong");
   }
-  //add in index ++ on next questionindex++
 }
 
-//Display result, add score
+//-----Pull next question when user clicks "Next"
+next.addEventListener("click", function () {
+  questionIndex++;
+  gameNext();
+});
 
-//next question or quit
-
-//end game
-// while loop - as long as no length //
-// check before game next to see if anything left in array, if not run endgame
-
+//-----end game
+//TO D0:  add while loop - as long as no length
+// // check before game next to see if anything left in array, if not run endgame
 
 //display score, log high scores
 
@@ -72,9 +68,9 @@ function chooseAnswer() {
 //questions list:
 var questionCard = [
   {
-    question: "Who am I?",
+    question: "Q1)     Never gonna:",
     answers: [
-      { text: "I don't know", response: true },
+      { text: "Give You Up", response: true },
       { text: "I don't know", response: false },
       { text: "I don't know", response: false },
       { text: "I don't know", response: false },
@@ -82,20 +78,20 @@ var questionCard = [
   },
 
   {
-    question: "Who am me?",
+    question: "Q2)     Never gonna:",
     answers: [
-      { text: "I know", response: true },
       { text: "I don't know", response: false },
       { text: "I don't know", response: false },
+      { text: "Let You Down", response: true },
       { text: "I don't know", response: false },
     ],
   },
 
   {
-    question: "Who am we?",
+    question: "Q3)     Never gonna:",
     answers: [
-      { text: "I know", response: true },
       { text: "I don't know", response: false },
+      { text: "Run Around and Desert You", response: true },
       { text: "I don't know", response: false },
       { text: "I don't know", response: false },
     ],
