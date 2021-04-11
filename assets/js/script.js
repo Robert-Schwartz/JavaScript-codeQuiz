@@ -195,5 +195,4 @@ var questionCard = [
       { text: "Key/Value pairs", response: true },
     ],
   },
-
 ];
