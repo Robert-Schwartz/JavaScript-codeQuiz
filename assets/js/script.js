@@ -45,6 +45,12 @@ function gameNext() {
 function chooseAnswer() {
   console.log("answer clicked!");
   console.log(this.value);
+
+  for (let i = 0; i < answers.length; i++) {
+    answers[i].disabled = true;
+    console.log(answers[i]);
+  }
+
   if (this.value === "true") {
     this.classList.add("correct");
     newScore = newScore += 100;
@@ -72,19 +78,21 @@ next.addEventListener("click", function () {
 //----- Reset Answers
 function resetAnswers() {
   //   answers.classList.remove("wrong correct");
-  console.log("rest quiz box");
+  console.log("reset quiz box");
+  for (let i = 0; i < answers.length; i++) {
+    answers[i].disabled = false;
+    answers[i].classList.remove("correct");
+    answers[i].classList.remove("wrong");
+    console.log(answers[i]);
+  }
   result.classList.add("hide");
   quizScore.classList.remove("hide");
   quizScore.textContent = `Score: ${newScore}`;
 }
 
-//-----end game
-//TO D0:  add while loop - as long as no length
-// // check before game next to see if anything left in array, if not run endgame
+//-----end Quiz
 
-//display score, log high scores
 
-//retry or quiz
 
 //questions list:
 var questionCard = [
