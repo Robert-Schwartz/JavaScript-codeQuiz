@@ -5,7 +5,7 @@ var quizContent = document.querySelector("#questionAnswers");
 var answers = document.querySelectorAll(".option");
 var quizScore = document.querySelector("#scoreBox");
 var result = document.querySelector("#resultText");
-var gameOver = document.querySelector("#gameOver")
+var gameOver = document.querySelector("#gameOver");
 var questionIndex = 0;
 var newScore = 0;
 var timer = 60;
@@ -134,4 +134,66 @@ var questionCard = [
       { text: "I don't know", response: false },
     ],
   },
+
+  {
+    question:
+      "Q) Inside which HTML element do we put the JavaScript:",
+    answers: [
+      { text: "<javaScript>", response: false },
+      { text: "<meta>", response: false },
+      { text: "<script>", response: true },
+      { text: "<scripting>", response: false },
+    ],
+  },
+  {
+    question:
+      "Q) Which is not a primitive type :",
+    answers: [
+      { text: "String", response: false },
+      { text: "Array", response: true },
+      { text: "Number", response: false },
+      { text: "Boolean", response: false },
+    ],
+  },
+  {
+    question:
+      "Q) The limits in which a variable exists is the? :",
+    answers: [
+      { text: "Body", response: false },
+      { text: "Scale", response: false },
+      { text: "Scope", response: true },
+      { text: "Field", response: false },
+    ],
+  },
+  {
+    question:
+      "Q) which operator would you use to check if two values were both true? :",
+    answers: [
+      { text: "||", response: false },
+      { text: "&&", response: true },
+      { text: "&", response: false },
+      { text: "|", response: false },
+    ],
+  },
+  {
+    question:
+      "Q) Math.floor is used to? :",
+    answers: [
+      { text: "Round down a number", response: true },
+      { text: "Set number to '0')", response: false },
+      { text: "Delete number", response: false },
+      { text: "All of the above", response: false },
+    ],
+  },
+  {
+    question:
+      "Q) Objects mainly contain?: ",
+    answers: [
+      { text: "One value", response: false },
+      { text: "If - else statements", response: false },
+      { text: "for loops", response: false },
+      { text: "Key/Value pairs", response: true },
+    ],
+  },
+
 ];
