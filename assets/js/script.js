@@ -5,6 +5,7 @@ var quizContent = document.querySelector("#questionAnswers");
 var answers = document.querySelectorAll(".option");
 var quizScore = document.querySelector("#scoreBox");
 var result = document.querySelector("#resultText");
+var gameOver = document.querySelector("#gameOver")
 var questionIndex = 0;
 var newScore = 0;
 var timer = 60;
@@ -31,13 +32,18 @@ function gameStart() {
 
 //-----Pull Questions and Answers to display
 function gameNext() {
-  document.querySelector("#questions").textContent =
-    questionCard[questionIndex].question;
+  if (questionIndex <= questionCard.length - 1) {
+    document.querySelector("#questions").textContent =
+      questionCard[questionIndex].question;
 
-  for (let i = 0; i < answers.length; i++) {
-    answers[i].textContent = questionCard[questionIndex].answers[i].text;
-    answers[i].value = questionCard[questionIndex].answers[i].response;
-    answers[i].onclick = chooseAnswer;
+    for (let i = 0; i < answers.length; i++) {
+      answers[i].textContent = questionCard[questionIndex].answers[i].text;
+      answers[i].value = questionCard[questionIndex].answers[i].response;
+      answers[i].onclick = chooseAnswer;
+    }
+  } else {
+    endGame();
+    console.log("Success");
   }
 }
 
@@ -77,7 +83,6 @@ next.addEventListener("click", function () {
 
 //----- Reset Answers
 function resetAnswers() {
-  //   answers.classList.remove("wrong correct");
   console.log("reset quiz box");
   for (let i = 0; i < answers.length; i++) {
     answers[i].disabled = false;
@@ -91,8 +96,12 @@ function resetAnswers() {
 }
 
 //-----end Quiz
-
-
+function endGame() {
+  gameOver.classList.remove("hide");
+  next.classList.add("hide");
+  quizContent.classList.add("hide");
+  document.querySelector("#finalScore").textContent = newScore;
+}
 
 //questions list:
 var questionCard = [
