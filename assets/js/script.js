@@ -9,8 +9,9 @@ var gameOver = document.querySelector("#gameOver");
 var questionIndex = 0;
 var newScore = 0;
 var timer = 60;
-// TODO:  create function for score
+
 //TODO:  create function for timer
+
 
 //-----Start the Game and Timer when user clicks "Begin"
 begin.addEventListener("click", function () {
@@ -106,9 +107,9 @@ function endGame() {
 //questions list:
 var questionCard = [
   {
-    question: "Q1)     Never gonna:",
+    question: "Q1)     This Sucks?:",
     answers: [
-      { text: "Give You Up", response: true },
+      { text: "Yeah", response: true },
       { text: "I don't know", response: false },
       { text: "I don't know", response: false },
       { text: "I don't know", response: false },
