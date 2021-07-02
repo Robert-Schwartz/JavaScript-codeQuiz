@@ -107,43 +107,43 @@ function endGame() {
 //questions list:
 var questionCard = [
   {
-    question: "Q1)     This Sucks?:",
+    question: "Q1)     Which of the following best describes JavaScript?:",
     answers: [
-      { text: "Yeah", response: true },
-      { text: "I don't know", response: false },
-      { text: "I don't know", response: false },
-      { text: "I don't know", response: false },
+      { text: "a low-level programming language.", response: false },
+      { text: "a scripting language precompiled in the browser.", response: false },
+      { text: "a compiled scripting language.", response: false },
+      { text: "an object-oriented scripting language.", response: true },
     ],
   },
 
   {
-    question: "Q2)     Never gonna:",
+    question: "Q2)     Which of the following is not considered a JavaScript operator?",
     answers: [
-      { text: "I don't know", response: false },
-      { text: "I don't know", response: false },
-      { text: "Let You Down", response: true },
-      { text: "I don't know", response: false },
+      { text: "new", response: false },
+      { text: "this", response: true },
+      { text: "delete", response: false },
+      { text: "typeof", response: false },
     ],
   },
 
   {
-    question: "Q3)     Never gonna:",
+    question: "Q3)     JavaScript is interpreted by the _________:",
     answers: [
-      { text: "I don't know", response: false },
-      { text: "Run Around and Desert You", response: true },
-      { text: "I don't know", response: false },
-      { text: "I don't know", response: false },
+      { text: "Client", response: true },
+      { text: "Server", response: false},
+      { text: "Object", response: false },
+      { text: "Database", response: false },
     ],
   },
 
   {
     question:
-      "Q) Inside which HTML element do we put the JavaScript:",
+      "Q) Using a(n) _______ statement is how you test for a specific condition.",
     answers: [
-      { text: "<javaScript>", response: false },
-      { text: "<meta>", response: false },
-      { text: "<script>", response: true },
-      { text: "<scripting>", response: false },
+      { text: "Select", response: false },
+      { text: "if", response: true },
+      { text: "Switch", response: false },
+      { text: "For", response: false },
     ],
   },
   {
@@ -178,10 +178,10 @@ var questionCard = [
   },
   {
     question:
-      "Q) Math.floor is used to? :",
+      "Q) What is Math.floor used for? :",
     answers: [
       { text: "Round down a number", response: true },
-      { text: "Set number to '0')", response: false },
+      { text: "Set number to '0'", response: false },
       { text: "Delete number", response: false },
       { text: "All of the above", response: false },
     ],
