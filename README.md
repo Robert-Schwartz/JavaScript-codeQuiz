@@ -17,10 +17,10 @@ HTML, JavaScript, CSS
 
 ## Installation
 Clone Repo by running the command line prompt:
-`git clone https://github.com/Robert-Schwartz/codeQuiz.git`
+`git clone https://github.com/Robert-Schwartz/JavaScript-codeQuiz`
 
 ## Usage
-- Visit the deployed website at https://robert-schwartz.github.io/codeQuiz/ to take the quiz
+- Visit the deployed website at https://robert-schwartz.github.io/JavaScript-codeQuiz/ to take the quiz
 - Select your answer for each question
 - View the results at the end of the quiz
 
